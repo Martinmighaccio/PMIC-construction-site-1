@@ -5,19 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PMIC Construction</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox/lightbox.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <header class="hero">
@@ -36,10 +25,7 @@
   <section id="about" class="about">
     <div class="container">
       <h2>Who We Are</h2>
-      <p>
-        PMIC Construction (Put Me In Coach) is a full-crew subcontractor based in Cedar City, Utah, building custom homes from the ground up.
-        We specialize in every phase of residential construction including framing, cement, landscaping, finish work, and final cleaning.
-      </p>
+      <p>PMIC Construction is a full-crew subcontractor based in Cedar City, Utah. We build custom homes from the ground up, including framing, cement, landscaping, finish work, and final cleaning.</p>
     </div>
   </section>
 
@@ -60,11 +46,11 @@
   <section id="gallery" class="gallery">
     <div class="container">
       <h2>Project Gallery</h2>
-      <p>Add your own photos by replacing the images below in the <code>/images</code> folder.</p>
+      <p>Click any photo to view it full screen.</p>
       <div class="gallery-grid">
-        <img src="images/sample1.jpg" alt="Project 1">
-        <img src="images/sample2.jpg" alt="Project 2">
-        <img src="images/sample3.jpg" alt="Project 3">
+        <a href="images/photo1.jpg" data-lightbox="pmic"><img src="images/photo1.jpg" alt="Project 1"></a>
+        <a href="images/photo2.jpg" data-lightbox="pmic"><img src="images/photo2.jpg" alt="Project 2"></a>
+        <a href="images/photo3.jpg" data-lightbox="pmic"><img src="images/photo3.jpg" alt="Project 3"></a>
       </div>
     </div>
   </section>
@@ -81,5 +67,7 @@
   <footer>
     <p>© 2025 PMIC Construction. Built Proudly in the USA 🇺🇸</p>
   </footer>
+
+  <script src="lightbox/lightbox-plus-jquery.js"></script>
 </body>
 </html>
